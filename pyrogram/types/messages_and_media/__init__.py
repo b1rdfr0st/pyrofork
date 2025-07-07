@@ -57,6 +57,9 @@ from .stripped_thumbnail import StrippedThumbnail
 from .thumbnail import Thumbnail
 from .todo_list import TodoList
 from .todo_task import TodoTask
+from .todo_tasks_added import TodoTasksAdded
+from .todo_tasks_completed import TodoTasksCompleted
+from .todo_tasks_incompleted import TodoTasksIncompleted
 from .venue import Venue
 from .video import Video
 from .video_note import VideoNote
@@ -146,5 +149,8 @@ __all__ = [
     "TranslatedText",
     "TextQuote",
     "TodoList",
-    "TodoTask"
+    "TodoTask",
+    "TodoTasksAdded",
+    "TodoTasksCompleted",
+    "TodoTasksIncompleted"
 ]

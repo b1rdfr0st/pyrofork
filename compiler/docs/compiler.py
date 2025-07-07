@@ -537,6 +537,9 @@ def pyrogram_api():
             Thumbnail
             TodoList
             TodoTask
+            TodoTasksAdded
+            TodoTasksCompleted
+            TodoTasksIncompleted
             Audio
             AvailableEffect
             Document
