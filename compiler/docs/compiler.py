@@ -535,6 +535,8 @@ def pyrogram_api():
             MessageOrigin
             Photo
             Thumbnail
+            TodoList
+            TodoTask
             Audio
             AvailableEffect
             Document

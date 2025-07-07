@@ -194,6 +194,9 @@ class Message(Object, Update):
         paid_media (:obj:`~pyrogram.types.PaidMedia`, *optional*):
             Message is a paid media, information about the paid media.
 
+        todo (:obj:`~pyrogram.types.Todo`, *optional*):
+            Message is a todo list, information about the todo list.
+
         sticker (:obj:`~pyrogram.types.Sticker`, *optional*):
             Message is a sticker, information about the sticker.
 
@@ -468,6 +471,7 @@ class Message(Object, Update):
         document: "types.Document" = None,
         photo: "types.Photo" = None,
         paid_media: "types.PaidMedia" = None,
+        todo: "types.Todo" = None,
         sticker: "types.Sticker" = None,
         animation: "types.Animation" = None,
         game: "types.Game" = None,
@@ -584,6 +588,7 @@ class Message(Object, Update):
         self.document = document
         self.photo = photo
         self.paid_media = paid_media
+        self.todo = todo
         self.sticker = sticker
         self.animation = animation
         self.game = game
@@ -1004,6 +1009,7 @@ class Message(Object, Update):
 
             photo = None
             paid_media = None
+            todo = None
             location = None
             contact = None
             venue = None
@@ -1130,6 +1136,9 @@ class Message(Object, Update):
                 elif isinstance(media, raw.types.MessageMediaPaidMedia):
                     paid_media = types.PaidMedia._parse(client, media)
                     media_type = enums.MessageMediaType.PAID_MEDIA
+                elif isinstance(media, raw.types.MessageMediaToDo):
+                    todo = types.TodoList._parse(client, media, users)
+                    media_type = enums.MessageMediaType.TODO
                 else:
                     media = None
 
@@ -1199,6 +1208,7 @@ class Message(Object, Update):
                 invert_media=message.invert_media,
                 photo=photo,
                 paid_media=paid_media,
+                todo=todo,
                 location=location,
                 contact=contact,
                 venue=venue,
