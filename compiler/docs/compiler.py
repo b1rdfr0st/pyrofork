@@ -165,6 +165,7 @@ def pyrogram_api():
         """,
         messages="""
         Messages
+            add_task_to_todo
             send_message
             forward_media_group
             forward_messages

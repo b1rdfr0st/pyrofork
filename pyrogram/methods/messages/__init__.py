@@ -17,6 +17,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrofork.  If not, see <http://www.gnu.org/licenses/>.
 
+from .add_task_to_todo import AddTaskToTodo
 from .copy_media_group import CopyMediaGroup
 from .copy_message import CopyMessage
 from .delete_chat_history import DeleteChatHistory
@@ -80,6 +81,7 @@ from .transcribe_audio import TranscribeAudio
 from .translate_text import TranslateText
 
 class Messages(
+    AddTaskToTodo,
     DeleteChatHistory,
     DeleteMessages,
     DeleteScheduledMessages,
