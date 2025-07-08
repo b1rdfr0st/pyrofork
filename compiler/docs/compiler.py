@@ -174,6 +174,7 @@ def pyrogram_api():
             send_audio
             send_document
             send_sticker
+            send_todo
             send_video
             send_animation
             send_voice
@@ -739,6 +740,7 @@ def pyrogram_api():
             InputVenueMessageContent
             InputContactMessageContent
             InputInvoiceMessageContent
+            InputTodoTask
         """,
         authorization="""
         Authorization

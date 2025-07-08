@@ -66,6 +66,7 @@ from .send_photo import SendPhoto
 from .send_poll import SendPoll
 from .send_reaction import SendReaction
 from .send_sticker import SendSticker
+from .send_todo import SendTodo
 from .send_venue import SendVenue
 from .send_video import SendVideo
 from .send_video_note import SendVideoNote
@@ -103,6 +104,7 @@ class Messages(
     SendMessage,
     SendPhoto,
     SendSticker,
+    SendTodo,
     SendVenue,
     SendVideo,
     SendVideoNote,
