@@ -36,19 +36,29 @@ class TodoList(Object):
 
         tasks (List of :obj:`~pyrogram.types.TodoTask`):
             List of tasks in the todo list.
+
+        can_append (``bool``, optional):
+            True, if other users can append tasks to this todo list.
+
+        can_complete (``bool``, optional):
+            True, if other users can complete tasks in this todo list.
     """
 
     def __init__(
         self,
         title: str,
         entities: List["types.MessageEntity"],
-        tasks: List["types.TodoTask"] = None
+        tasks: List["types.TodoTask"] = None,
+        can_append: bool = False,
+        can_complete: bool = False
     ):
         super().__init__()
 
         self.title = title
         self.entities = entities
         self.tasks = tasks
+        self.can_append = can_append
+        self.can_complete = can_complete
 
     @staticmethod
     def _parse(
@@ -67,5 +77,7 @@ class TodoList(Object):
         return TodoList(
             title=todo_list.title.text,
             entities=entities,
-            tasks=tasks
+            tasks=tasks,
+            can_append=todo_list.others_can_append,
+            can_complete=todo_list.others_can_complete
         )
