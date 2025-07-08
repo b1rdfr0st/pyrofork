@@ -187,6 +187,7 @@ def pyrogram_api():
             send_contact
             send_cached_media
             send_reaction
+            set_todo_tasks_completion
             edit_message_text
             edit_message_caption
             edit_message_media
