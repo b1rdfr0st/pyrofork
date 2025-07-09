@@ -225,7 +225,6 @@ def pyrogram_api():
             get_discussion_replies_count
             get_custom_emoji_stickers
             transcribe_audio
-            translate_message_text
             start_bot
             delete_chat_history
         """,
@@ -569,7 +568,6 @@ def pyrogram_api():
             WebPageEmpty
             WebPagePreview
             TranscribedAudio
-            TranslatedText
             TextQuote
             Poll
             PollOption
@@ -822,7 +820,6 @@ def pyrogram_api():
             Message.get_media_group
             Message.react
             Message.transcribe
-            Message.translate
             Message.wait_for_click
         """,
         chat="""

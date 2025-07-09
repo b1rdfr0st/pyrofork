@@ -82,7 +82,6 @@ from .exported_story_link import ExportedStoryLink
 from .wallpaper import Wallpaper
 from .wallpaper_settings import WallpaperSettings
 from .transcribed_audio import TranscribedAudio
-from .translated_text import TranslatedText
 from .text_quote import TextQuote
 
 __all__ = [
@@ -146,7 +145,6 @@ __all__ = [
     "Wallpaper",
     "WallpaperSettings",
     "TranscribedAudio",
-    "TranslatedText",
     "TextQuote",
     "TodoList",
     "TodoTask",

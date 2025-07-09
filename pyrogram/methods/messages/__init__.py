@@ -79,7 +79,6 @@ from .stop_poll import StopPoll
 from .stream_media import StreamMedia
 from .vote_poll import VotePoll
 from .transcribe_audio import TranscribeAudio
-from .translate_text import TranslateText
 
 class Messages(
     AddTaskToTodo,
@@ -143,7 +142,6 @@ class Messages(
     StreamMedia,
     GetCustomEmojiStickers,
     TranscribeAudio,
-    TranslateText,
     StartBot
 ):
     pass
